@@ -1,13 +1,19 @@
-import React from 'react';
-import './index.css'; 
-import AppContainer from './AppContainer';
+import React from "react";
+import { CartProvider } from "./CartContext";
+import ProductList from "./ProductsList";
+import Cart from "./Cart";
+import "./index.css";
 
-function App() {
-  return (
-    <div className="App">
-      <AppContainer />
-    </div>
-  );
-}
+
+
+const App = () => {
+    return (
+        <CartProvider>
+            <h1>Shop</h1>
+            <ProductList />
+            <Cart />
+        </CartProvider>
+    );
+};
 
 export default App;
